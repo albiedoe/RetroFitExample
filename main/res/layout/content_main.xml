@@ -11,9 +11,21 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.albert.retrofitexample.MainActivity"
     tools:showIn="@layout/activity_main">
-
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Retro Fit Test"
+    android:id="@+id/button"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="Hello World!"
+        android:id="@+id/theTv"
+        android:paddingTop="50dp"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbar"
+        android:layout_below="@+id/theTv"
+        android:visibility="invisible"/>
+    </RelativeLayout>
