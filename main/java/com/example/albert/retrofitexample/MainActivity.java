@@ -1,5 +1,6 @@
 package com.example.albert.retrofitexample;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.telecom.Call;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.albert.retrofitexample.API.gitapi;
 import com.example.albert.retrofitexample.Model.User;
@@ -32,11 +34,13 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final Activity mContext = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.theTv);
         click = (Button) findViewById(R.id.button);
         pbar = (ProgressBar) findViewById(R.id.pbar);
+
 
         click.setOnClickListener(new View.OnClickListener() {
             @Override

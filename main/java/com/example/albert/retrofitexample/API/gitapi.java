@@ -8,12 +8,14 @@ import retrofit.http.GET;
 import retrofit.http.Path;
 import retrofit.http.Query;
 
-
 /**
  * Created by Albert on 1/9/2016.
  */
 public interface gitapi {
     @GET("/getUser.php")
     void getUser(@Query("user_id") int id,@Query("phone_id") String phoneId, Callback<User> response);
+
+    @GET("/getUser.php")
+    User getUserDirect(@Query("user_id") int id,@Query("phone_id") String phoneId);
 
 }
